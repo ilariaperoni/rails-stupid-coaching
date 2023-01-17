@@ -1,0 +1,15 @@
+
+
+<%# <%  stop_message = 'I am going to work right now!'
+    if @message == stop_message || @message == stop_message.upcase
+      ''
+    elsif @message.end_with?('?')
+      <h1>'Silly question, get dressed and go to work!'</h1>
+    else
+      'I do not care, get dressed and go to work!'
+    end
+%>
+<h1><%= if @message == 'hello'
+      'Silly question, get dressed and go to work!'
+    end %></h1>
+<%=  link_to("Ask a new question", ask_path)  %>
