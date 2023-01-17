@@ -4,9 +4,16 @@ class QuestionsController < ApplicationController
   end
 
   def answer
-    @message = params[:question]
+    # this method will look in the basket params, look for ask and it depends on the message will give an answer
+    @message = params[:ask]
 
-
+    if @message.downcase == 'I am going to work right now!'
+      @response = 'Finally, you lazy bum!'
+    elsif @message.end_with?('?')
+      @response = 'Silly question, get dressed and go to work!'
+    else
+      @response = 'I do not care, get dressed and go to work!'
+    end
 
     # stop_message = 'I am going to work right now!'
 
